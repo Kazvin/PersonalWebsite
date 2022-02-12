@@ -2,7 +2,7 @@ import { NavBar } from "./Nav";
 import { Footer } from "./Footer";
 import 'bootstrap/dist/css/bootstrap.css';
 import '../App.css';
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import LinkedinLogo from "../images/linkedinLogo.png";
 import GithubLogo from "../images/gitHubLogo.png"
@@ -91,6 +91,7 @@ export function Resume() {
 
             <div className="d-flex justify-content-center">
                 <iframe className=" frame "
+                title="Kazvin's Resume"
                     src="https://docs.google.com/document/d/e/2PACX-1vQlcASr2LSYMDXy-KUHQV4GGfh5UQ72IcC4V8gM8Too8omC27W9hFyDlYe2FhBB4w/pub?embedded=true"
                 >The iframe is not working
                 </iframe>
@@ -113,7 +114,7 @@ export function Errorpage() {
             <NavBar />
             <br /><br />
 
-            <h1 className="text-center">This route does not exist</h1>
+            <h1 className="text-center">The route {location.pathname} does not exist</h1>
 
 
         </div>
