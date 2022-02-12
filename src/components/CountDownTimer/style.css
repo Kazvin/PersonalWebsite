@@ -1,0 +1,41 @@
+
+body {
+    background-image: url('../../images/cloud.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size:cover;
+    text-align: center;
+    min-height: 100vh;
+    margin:0;
+    display:flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction:column;
+}
+
+h1 {
+    font-size: 3vw;
+    font-weight: lighter;
+}
+h2 {
+    font-size: 2vw;
+    font-weight: lighter;
+    color:mintcream;
+}
+
+.calendar {
+    margin: 5%;
+}
+
+.calendar input {
+    size: 30vw;
+}
+.timer-container {
+    margin: 5%;
+    display:inline-grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 3vw;
+    justify-content: center;
+    font-weight:bold;
+    color:oldlace;
+}
+
