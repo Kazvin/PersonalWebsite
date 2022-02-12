@@ -1,6 +1,7 @@
 import './style.css';
 // import './script.js';
 import { NavBar } from "../Nav";
+import React from "react";
 
 // import { countdown, changeDate } from './script.js';
 

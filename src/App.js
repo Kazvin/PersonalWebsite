@@ -1,5 +1,6 @@
 import './App.css';
-import {NavBar} from "./components/Nav";
+import React from "react";
+
 import { Routes, Route } from 'react-router';
 import {Home, Projects, Contact, Resume, Errorpage} from "./components/pages";
 import { CountDownTimer } from './components/CountDownTimer/CountDownTimer';

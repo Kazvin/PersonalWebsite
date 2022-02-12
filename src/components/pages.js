@@ -1,3 +1,4 @@
+import React from "react";
 import { NavBar } from "./Nav";
 import { Footer } from "./Footer";
 import 'bootstrap/dist/css/bootstrap.css';
