@@ -8,8 +8,10 @@ import { useLocation } from "react-router-dom";
 import LinkedinLogo from "../images/linkedinLogo.png";
 import GithubLogo from "../images/gitHubLogo.png"
 
+import ReactLogo from "../images/reactLogo.png";
 
-import { Card1, Card2, Card3, Card4 } from "./Card";
+
+import { Card1, Card2, Card3, Card4, Card5, CardTemplate } from "./Card";
 
 export function Home() {
     return (
@@ -43,6 +45,13 @@ export function Projects() {
                     <Card2 />
                     <Card3 />
                     <Card4 />
+                    <Card5 />
+
+                    <CardTemplate logo = {ReactLogo} title="This Website" github="https://github.com/Kazvin/PersonalWebsite" 
+                text="Created using the component based library React. Responsive pages with the bootstrap css framework. 
+                Multiple pages with components rendered and deployed on vercel."/>
+
+
                 </div>
 
                 <Footer />

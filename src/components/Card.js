@@ -8,6 +8,7 @@ import JavaScriptLogo from "../images/javaScriptLogo.png";
 import HerokuLogo from "../images/herokuLogo.png";
 import HTMLCSSLogo from "../images/htmlcssLogo.jpg";
 import SQLLogo from "../images/sqlLogo.png";
+import { Link } from "react-router-dom";
 
 
 
@@ -46,7 +47,6 @@ export function Card1() {
 
 export function Card2 () {
     return (
-
         <Card style={{ width: '18rem', height: '40rem' }} className="mx-auto" >
         <Card.Img variant="top" className="img-fluid card-img " src={JavaScriptLogo}  />
         <Card.Body>
@@ -81,51 +81,9 @@ export function Card2 () {
 
 }
 
-// Countdown Timer
-// ·         Displays the amount of time to a specific date
-// ·         Specific date can be set,
-// and timer will display the number of days, hours, minutes to specific date
-// ·         Use of the date object and DOM
-
-// Match Game
-// ·         Flip two cards, and if they match stay flipped otherwise flip back
-// ·         Use of HTML DOM to alter div elements and function to randomize
-// order of cards
 
 
 export function Card3 () {
-    return (
-
-        <Card style={{ width: '18rem', height: '40rem' }} className="mx-auto" >
-        <Card.Img variant="top" className="img-fluid card-img " src={HTMLCSSLogo}  />
-        <Card.Body>
-            <Card.Title className="text-center">HTML/CSS Webpages</Card.Title>
-            <Card.Text className="text-center">
-                <b>Countdown Timer:</b> Use of the Date object to set date and DOM to change the innerHTML. 
-                    Input type set to "date" for a specific date to calculate time to.
-                <br /><b>Match Game</b>: Use of an array to store icons and randomize order.
-            </Card.Text>
-            <div className="d-flex justify-content-center">
-            <ul className="list-group list-group-horizontal ">
-
-            <li className="list-group-item ">
-                        <a href="https://github.com/Kazvin/Portfolio" >
-                        <img src={GithubLogo} alt="github" className="link-img img-fluid" />
-                        </a>
-                    </li>
-            </ul>
-            </div>
-        </Card.Body>
-    </Card>
-
-
-    );
-
-}
-
-
-
-export function Card4 () {
     return (
 
         <Card style={{ width: '18rem', height: '40rem' }} className="mx-auto" >
@@ -154,3 +112,106 @@ export function Card4 () {
 
 }
 
+
+export function Card4 () {
+    return (
+
+        <Card style={{ width: '18rem', height: '40rem' }} className="mx-auto" >
+        <Card.Img variant="top" className="img-fluid card-img " src={HTMLCSSLogo}  />
+        <Card.Body>
+            <Card.Title className="text-center">Countdown Timer</Card.Title>
+            <Card.Text className="text-center">
+                Use of Date object to store two dates. Calculates the difference between dates and displays the time between.
+                Use of the DOM in vanilla Javascript and React hooks to change the state of the time values. 
+            </Card.Text>
+            <div className="d-flex justify-content-center">
+            <ul className="list-group list-group-horizontal ">
+
+            <li className="list-group-item ">
+                        <a href="https://github.com/Kazvin/Portfolio/tree/main/Countdown_Timer" >
+                        <img src={GithubLogo} alt="github" className="link-img img-fluid" />
+                        Javascript
+                        </a>
+                    </li>
+
+                    <li className="list-group-item ">
+                        <a href="https://github.com/Kazvin/PersonalWebsite/tree/master/src/components/CountDownTimer" >
+                        <img src={GithubLogo} alt="github" className="link-img img-fluid" />
+                        React
+                        </a>
+                    </li>
+
+                    <li className="list-group-item  ">
+                        <Link to="/countdown"> Page </Link>
+                    </li>
+            </ul>
+            </div>
+        </Card.Body>
+    </Card>
+
+
+    );
+
+}
+
+
+
+
+export function Card5 () {
+    return (
+
+        <Card style={{ width: '18rem', height: '40rem' }} className="mx-auto" >
+        <Card.Img variant="top" className="img-fluid card-img " src={HTMLCSSLogo}  />
+        <Card.Body>
+            <Card.Title className="text-center">Match Game</Card.Title>
+            <Card.Text className="text-center">
+                Use of an array to store icons and randomize order.
+            </Card.Text>
+            <div className="d-flex justify-content-center">
+            <ul className="list-group list-group-horizontal ">
+
+            <li className="list-group-item ">
+                        <a href="https://github.com/Kazvin/Portfolio/tree/main/Match%20Game" >
+                        <img src={GithubLogo} alt="github" className="link-img img-fluid" />
+                        </a>
+                    </li>
+            </ul>
+            </div>
+        </Card.Body>
+    </Card>
+
+
+    );
+
+}
+
+
+export function CardTemplate(props) {
+
+    return (
+    <Card style={{ width: '18rem', height: '40rem' }} className="mx-auto" >
+    <Card.Img variant="top" className="img-fluid card-img " src={props.logo}  />
+    <Card.Body>
+        <Card.Title className="text-center">{props.title}</Card.Title>
+        <Card.Text className="text-center">
+            {props.text}
+        </Card.Text>
+        <div className="d-flex justify-content-center">
+        <ul className="list-group list-group-horizontal ">
+
+
+        <li className="list-group-item ">
+                    <a href={props.github} >
+                    <img src={GithubLogo} alt="github" className="link-img img-fluid" />
+                    </a>
+                </li>
+
+        </ul>
+        </div>
+    </Card.Body>
+
+    
+</Card>
+);
+
+}
