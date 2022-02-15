@@ -4,11 +4,14 @@ import '../App.css';
 
 
 export function NavBar() {
+
+
+
     return (
 
-        <div className="container-fluid ">
+        <div className="container-fluid  nav1">
             <nav className="navbar bg-light nav " role="navigation">
-                <ul className="nav  mx-auto">
+                <ul className="nav  mx-auto highlight-text">
                     <li className="nav-link"><Link to="/"> Home </Link></li>
                     <li className="nav-link"><Link to="/projects"> Projects  </Link></li>
                     <li className="nav-link"><Link to="/contact"> Contact Me  </Link></li>

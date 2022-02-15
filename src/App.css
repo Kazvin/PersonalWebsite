@@ -4,13 +4,34 @@
 
 }
 
+
 .background {
-  background-image: url("images/cloud.jpg");
+  /* background-image: url("images/cloud.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
+  background-position: center; */
+  height: 100vw;
+  width: 100vw; 
+
+  background-color: grey;
+
+}
+
+
+.fade {
+  animation: fadeInAnimation ease-in 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
 }
 
 
@@ -27,6 +48,29 @@
 
 nav {
   margin: 1vw;
+  position: relative;
+  
+}
+
+
+
+.highlight-text li {
+
+  color: rgba(0, 4, 8, 0.842); 
+  text-decoration: none;
+  transition: border-radius 1s;
+  transition-timing-function: ease-in;
+  border-radius: 50px;
+
+}
+
+.highlight-text li:hover
+{
+  background-color: rgba(2, 113, 204, 0.514);
+} 
+
+.highlight-text li a{
+  text-decoration: none;
 }
 
 
@@ -42,8 +86,6 @@ img.card-img {
   height: 200px;
 }
 
-
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -55,3 +97,7 @@ img.card-img {
   color: white;
 }
 
+
+NavBar:focus-within {
+  background-color: blueviolet;
+}

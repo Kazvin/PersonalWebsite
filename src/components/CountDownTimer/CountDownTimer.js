@@ -54,7 +54,7 @@ export function CountDownTimer() {
 
         setTime(targetDate.getTime() - todaysDate.getTime());
 
-       
+
     }, [targetDate]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
@@ -99,15 +99,14 @@ export function CountDownTimer() {
         return () => clearInterval(interval);
     });
 
-    useEffect(() => {
-        // console.log("today's date set to " + todaysDate);
-    }, [todaysDate]);
+
 
 
     return (
         <>
-            <div className='container-fluid'>
-                <NavBar />
+            <NavBar />
+            <div className='container-fluid fade'>
+
 
 
                 <h1>Countdown</h1>
